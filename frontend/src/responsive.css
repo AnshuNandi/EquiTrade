@@ -1,0 +1,303 @@
+/* Mobile-First Responsive Typography - MAXIMUM SIZES x1.5 */
+
+/* Base styles for mobile devices (smaller screens) */
+@media (max-width: 575.98px) {
+  /* Reset and scale body */
+  * {
+    -webkit-text-size-adjust: 100% !important;
+  }
+  
+  body {
+    font-size: 2.7rem !important;
+  }
+  
+  /* Headings - ABSOLUTE MAXIMUM */
+  h1, .fs-1, .h1 {
+    font-size: 5.25rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  h2, .fs-2, .h2 {
+    font-size: 4.5rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  h3, .fs-3, .h3 {
+    font-size: 3.75rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  h4, .fs-4, .h4 {
+    font-size: 3.3rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  h5, .fs-5, .h5 {
+    font-size: 3rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  h6, .fs-6, .h6 {
+    font-size: 2.7rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 2.7rem !important;
+    line-height: 1.8 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Links */
+  a {
+    font-size: 2.7rem !important;
+    line-height: 1.8 !important;
+  }
+  
+  /* Spans, divs with text, and other inline elements */
+  span, div, label, strong, em, small, .text-small {
+    font-size: 2.7rem !important;
+    line-height: 1.8 !important;
+  }
+  
+  /* Navbar - MAXIMUM */
+  .navbar {
+    padding: 1.5rem 0 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 3rem !important;
+    padding: 0 !important;
+  }
+  
+  .navbar-brand img {
+    width: 60% !important;
+    min-width: 150px !important;
+    max-width: 250px !important;
+  }
+  
+  .navbar-toggler {
+    font-size: 2.5rem !important;
+    padding: 1rem 1.5rem !important;
+    border-width: 2px !important;
+  }
+  
+  .navbar-toggler-icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  .nav-link {
+    font-size: 3rem !important;
+    padding: 1.875rem 2.25rem !important;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0 !important;
+  }
+  
+  /* Buttons */
+  .btn {
+    font-size: 3rem !important;
+    padding: 1.8rem 3.75rem !important;
+    min-height: 90px !important;
+    border-radius: 8px !important;
+  }
+  
+  .btn-primary {
+    font-size: 3rem !important;
+  }
+  
+  .btn-sm {
+    font-size: 2.7rem !important;
+    padding: 1.5rem 3rem !important;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 2.7rem !important;
+  }
+  
+  footer a, footer p {
+    font-size: 2.55rem !important;
+    line-height: 2.8 !important;
+  }
+  
+  footer .fw-bold, footer p.fw-bold {
+    font-size: 3rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* List items */
+  li, li p, ul li, ol li {
+    font-size: 2.55rem !important;
+    line-height: 2.2 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  ul, ol {
+    padding-left: 3rem !important;
+  }
+  
+  /* Text utilities */
+  .text-muted {
+    font-size: 2.55rem !important;
+  }
+  
+  .text-small {
+    font-size: 2.4rem !important;
+  }
+  
+  .text-body-secondary {
+    font-size: 2.55rem !important;
+  }
+  
+  /* Form elements */
+  input, textarea, select {
+    font-size: 2.7rem !important;
+    padding: 1.5rem !important;
+    min-height: 70px !important;
+  }
+  
+  label {
+    font-size: 2.7rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Tables */
+  table {
+    font-size: 2.7rem !important;
+  }
+  
+  th, td {
+    font-size: 2.7rem !important;
+    padding: 1.5rem !important;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Logo and brand images - make larger */
+  .navbar-brand img,
+  footer img {
+    width: 70% !important;
+    max-width: 300px !important;
+  }
+  
+  /* Containers and spacing */
+  .container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  
+  .row {
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+  }
+  
+  /* Spacing utilities - increased */
+  .mt-1 { margin-top: 1.5rem !important; }
+  .mt-2 { margin-top: 2rem !important; }
+  .mt-3 { margin-top: 3rem !important; }
+  .mt-4 { margin-top: 4rem !important; }
+  .mt-5 { margin-top: 5.25rem !important; }
+  
+  .mb-1 { margin-bottom: 1.5rem !important; }
+  .mb-2 { margin-bottom: 2rem !important; }
+  .mb-3 { margin-bottom: 3rem !important; }
+  .mb-4 { margin-bottom: 4rem !important; }
+  .mb-5 { margin-bottom: 5.25rem !important; }
+  
+  .p-1 { padding: 1.5rem !important; }
+  .p-2 { padding: 2rem !important; }
+  .p-3 { padding: 3rem !important; }
+  .p-4 { padding: 4rem !important; }
+  .p-5 { padding: 5rem !important; }
+  
+  .px-2 { padding-left: 2rem !important; padding-right: 2rem !important; }
+  .px-3 { padding-left: 3rem !important; padding-right: 3rem !important; }
+  .px-5 { padding-left: 5rem !important; padding-right: 5rem !important; }
+  
+  .py-2 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .py-3 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  
+  /* Columns */
+  .col-12, [class*="col-"] {
+    padding: 2.25rem !important;
+  }
+  
+  /* Icons - make larger */
+  i, .fa {
+    font-size: 2.7rem !important;
+  }
+  
+  /* Border utilities */
+  .border {
+    border-width: 2px !important;
+  }
+}
+
+/* Tablets (576px to 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  body {
+    font-size: 2.1rem !important;
+  }
+  
+  h1, .fs-1 {
+    font-size: 4.5rem !important;
+  }
+  
+  h2, .fs-2 {
+    font-size: 3.75rem !important;
+  }
+  
+  h3, .fs-3 {
+    font-size: 3.3rem !important;
+  }
+  
+  h4, .fs-4 {
+    font-size: 2.85rem !important;
+  }
+  
+  h5, .fs-5 {
+    font-size: 2.55rem !important;
+  }
+  
+  p, a {
+    font-size: 2.1rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  .btn {
+    font-size: 2.20rem !important;
+    padding: 1.35rem 3rem !important;
+  }
+  
+  .nav-link {
+    font-size: 2.25rem !important;
+  }
+  
+  input, textarea, select {
+    font-size: 2.1rem !important;
+    padding: 1.2rem !important;
+  }
+  .footer-text{
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Desktop - keep default Bootstrap sizes */
+@media (min-width: 992px) {
+  /* Bootstrap defaults apply */
+}
+
