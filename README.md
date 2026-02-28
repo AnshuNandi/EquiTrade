@@ -123,10 +123,5 @@ This project is open source and available under the MIT License.
 - GitHub: [@AnshuNandi](https://github.com/AnshuNandi)
 - Email: anshu.nandi07@gmail.com
 
-## 📧 Support
-
-For support, contact us through the support page on the frontend or create an issue on GitHub.
-
----
 
 **Last Updated**: February 28, 2026
