@@ -8,7 +8,7 @@ import TopBar from "./TopBar";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [cookies, removeCookie] = useCookies([]);
+  const [, removeCookie] = useCookies([]);
   const [username, setUsername] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
