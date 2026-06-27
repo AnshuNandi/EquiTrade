@@ -19,7 +19,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://equi-trade-zeta.vercel.app"],
+    origin: [
+      "http://localhost:3000", 
+      "http://localhost:3001", 
+      process.env.DASHBOARD_URL
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
