@@ -22,7 +22,6 @@ yarn.lock
 build/
 dist/
 .gatsby-cache/
-public/
 
 # Logs
 npm-debug.log*
