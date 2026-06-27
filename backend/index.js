@@ -2,8 +2,10 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const authRoute = require("./Routes/AuthRoute");
+const { isAuthenticated } = require("./Middlewares/AuthMiddleware");
 
 const { HoldingsModel } = require("./model/HoldingsModel");
 
@@ -15,8 +17,16 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://localhost:3001", "https://equi-trade-zeta.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+app.use(express.json());
+app.use(cookieParser());
+app.use("/", authRoute);
 
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
@@ -187,18 +197,24 @@ app.use(bodyParser.json());
 //   res.send("Done!");
 // });
 
-app.get("/allHoldings", async (req, res) => {
-  let allHoldings = await HoldingsModel.find({});
+app.get("/allHoldings", isAuthenticated, async (req, res) => {
+  let allHoldings = await HoldingsModel.find({ userId: req.user._id });
   res.json(allHoldings);
 });
 
-app.get("/allPositions", async (req, res) => {
-  let allPositions = await PositionsModel.find({});
+app.get("/allPositions", isAuthenticated, async (req, res) => {
+  let allPositions = await PositionsModel.find({ userId: req.user._id });
   res.json(allPositions);
 });
 
-app.post("/newOrder", async (req, res) => {
+app.get("/allOrders", isAuthenticated, async (req, res) => {
+  let allOrders = await OrdersModel.find({ userId: req.user._id });
+  res.json(allOrders);
+});
+
+app.post("/newOrder", isAuthenticated, async (req, res) => {
   let newOrder = new OrdersModel({
+    userId: req.user._id,
     name: req.body.name,
     qty: req.body.qty,
     price: req.body.price,

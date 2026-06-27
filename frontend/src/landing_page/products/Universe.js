@@ -35,12 +35,13 @@ function Universe() {
           <p className="text-small text-muted px-3 px-lg-5 py-2">Personalized advice on life and health insurance. No spam and no mis-selling.</p>
         </div>
         <div className="col-12 d-flex justify-content-center mt-4">
-          <button
+          <a
+            href={`${process.env.REACT_APP_DASHBOARD_URL}/signup`}
             className="p-2 px-4 btn btn-primary fs-5 my-5"
             style={{ maxWidth: "300px", width: "100%" }}
           >
             Signup Now
-          </button>
+          </a>
         </div>
       </div>
     </div>

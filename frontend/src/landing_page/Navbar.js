@@ -29,9 +29,9 @@ function Navbar() {
           <form class="d-flex" role="search">
             <ul class="navbar-nav mb-lg-2">
               <li class="nav-item">
-                <Link class="nav-link fs-6" aria-current="page" to="/signup">
+                <a class="nav-link fs-6" aria-current="page" href={`${process.env.REACT_APP_DASHBOARD_URL}/signup`}>
                   Signup
-                </Link>
+                </a>
               </li>
               <li class="nav-item">
                 <Link class="nav-link fs-6" to="/about">

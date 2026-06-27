@@ -14,12 +14,13 @@ function Hero() {
           Online platform to invest in stocks, derivatives, mutual funds, and
           more
         </p>
-        <button
+        <a
+          href={`${process.env.REACT_APP_DASHBOARD_URL}/signup`}
           className="p-2 mt-2 btn btn-primary fs-5 mb-2"
           style={{ maxWidth: "300px", width: "100%", margin: "0 auto" }}
         >
           Sign up Now
-        </button>
+        </a>
       </div>
     </div>
   );

@@ -10,12 +10,13 @@ function OpenAccount() {
             Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and
             F&O trades.
           </p>
-          <button
+          <a
+            href={`${process.env.REACT_APP_DASHBOARD_URL}/signup`}
             className="p-3 px-4 btn btn-primary fs-5 mt-2 mb-5"
             style={{ maxWidth: "300px", width: "100%" }}
           >
             Sign up Now
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
-const BuyActionWindow = ({ uid }) => {
+const SellActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
   const generalContext = React.useContext(GeneralContext);
@@ -22,22 +22,28 @@ const BuyActionWindow = ({ uid }) => {
     }
   }, [uid]);
 
-  const handleBuyClick = () => {
-    axios.post(`${process.env.REACT_APP_API_URL}/newOrder`, {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "BUY",
-    }, { withCredentials: true }).then(() => {
-      toast.success("Order placed successfully!", { position: "top-right" });
-      generalContext.triggerOrdersRefresh();
-    });
+  const handleSellClick = () => {
+    axios
+      .post(
+        `${process.env.REACT_APP_API_URL}/newOrder`,
+        {
+          name: uid,
+          qty: stockQuantity,
+          price: stockPrice,
+          mode: "SELL",
+        },
+        { withCredentials: true }
+      )
+      .then(() => {
+        toast.success("Sell order placed successfully!", { position: "top-right" });
+        generalContext.triggerOrdersRefresh();
+      });
 
-    generalContext.closeBuyWindow();
+    generalContext.closeSellWindow();
   };
 
   const handleCancelClick = () => {
-    generalContext.closeBuyWindow();
+    generalContext.closeSellWindow();
   };
 
   return (
@@ -72,8 +78,8 @@ const BuyActionWindow = ({ uid }) => {
       <div className="buttons">
         <span>Margin required ₹{(stockQuantity * stockPrice).toFixed(2)}</span>
         <div>
-          <Link className="btn btn-blue" onClick={handleBuyClick}>
-            Buy
+          <Link className="btn btn-red" onClick={handleSellClick}>
+            Sell
           </Link>
           <Link to="" className="btn btn-grey" onClick={handleCancelClick}>
             Cancel
@@ -84,4 +90,4 @@ const BuyActionWindow = ({ uid }) => {
   );
 };
 
-export default BuyActionWindow;
+export default SellActionWindow;

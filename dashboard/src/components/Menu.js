@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ username, Logout }) => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
@@ -90,9 +90,14 @@ const Menu = () => {
           </li>
         </ul>
         <hr />
-        <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+        <div className="profile" onClick={handleProfileClick} style={{ position: "relative", cursor: "pointer" }}>
+          <div className="avatar">{username ? username.substring(0, 2).toUpperCase() : "ZU"}</div>
+          <p className="username">{username || "USERID"}</p>
+          {isProfileDropdownOpen && (
+            <div style={{ position: "absolute", top: "100%", right: 0, marginTop: "10px", backgroundColor: "white", padding: "10px 20px", boxShadow: "0px 4px 8px rgba(0,0,0,0.1)", borderRadius: "4px", zIndex: 1000 }}>
+              <button onClick={Logout} style={{ cursor: "pointer", background: "none", border: "none", color: "red", fontSize: "14px", padding: 0 }}>Logout</button>
+            </div>
+          )}
         </div>
       </div>
     </div>
