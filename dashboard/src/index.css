@@ -853,7 +853,7 @@ hr {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(143, 187, 204, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(143, 187, 204, 1) 35%, #387ed1 100%);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -869,7 +869,7 @@ hr {
 .form_container h2 {
   margin-block: 1rem;
   padding-block: 0.6rem;
-  color: rgba(0, 212, 255, 1);
+  color: #387ed1;
 }
 
 .form_container form {
@@ -903,16 +903,21 @@ hr {
 }
 
 .form_container button {
-  background-color: rgba(0, 212, 255, 1);
+  background-color: #387ed1;
   color: #fff;
   border: none;
   padding: 0.6rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.3rem;
+  transition: background-color 0.2s;
+}
+
+.form_container button:hover {
+  background-color: #2b61a2;
 }
 
 .form_container span a {
   text-decoration: none;
-  color: rgba(0, 212, 255, 1);
+  color: #387ed1;
 }
