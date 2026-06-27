@@ -15,10 +15,6 @@ const Home = () => {
 
   useEffect(() => {
     const verifyCookie = async () => {
-      if (!cookies.token) {
-        navigate("/login");
-        return;
-      }
       try {
         const { data } = await axios.post(
           `${process.env.REACT_APP_API_URL}/`,
