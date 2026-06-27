@@ -38,7 +38,16 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Run only once on component mount
 
-  const Logout = () => {
+  const Logout = async () => {
+    try {
+      await axios.post(
+        `${process.env.REACT_APP_API_URL}/logout`,
+        {},
+        { withCredentials: true }
+      );
+    } catch (err) {
+      console.log(err);
+    }
     removeCookie("token");
     navigate("/login");
   };

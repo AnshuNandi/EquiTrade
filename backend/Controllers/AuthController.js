@@ -53,3 +53,12 @@ module.exports.Login = async (req, res, next) => {
     res.json({ message: "Error logging in" });
   }
 };
+
+module.exports.Logout = async (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+  });
+  res.json({ success: true, message: "Logged out successfully" });
+};
